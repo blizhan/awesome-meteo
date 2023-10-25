@@ -10,10 +10,10 @@ Meteo is even more awesome, so we made this list to curate meteo related resourc
 ## :books: Table of Content
 =================
 <!--ts-->
-    * :closed_book: [Data](#:closed_book:-Data)
-    * :green_book: [Packages & Softwares](#:green_book:-Packages-&-Softwares-:floppy_disk:)
-    * :orange_book: [Algorithm](#:orange_book:-Algorithm)
-    * :blue_book: [Documents and Tutorials](#:blue_book:-Documents)
+    * [:closed_book: Data](#closed_book-data)
+    * [:green_book: Packages & Softwares](#green_book-packages--softwares)
+    * [:orange_book: Algorithm](#orange_book-algorithm)
+    * [:blue_book: Documents and Tutorials](#blue_book-documents)
 <!--te-->
 
 ## :closed_book: Data
@@ -44,7 +44,7 @@ Meteo is even more awesome, so we made this list to curate meteo related resourc
         - [ ] TODO
 
 
-## :green_book: Packages & Softwares :floppy_disk:
+## :green_book: Packages & Softwares
 =================
 ### :paperclip: Data IO
 
