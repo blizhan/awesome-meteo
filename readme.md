@@ -30,19 +30,27 @@ Meteo is even more awesome, so we made this list to curate meteo related resourc
     - ![http](static/icon/http.png)[nomads](https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/) - `https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.{{batch_date:%Y%m%d}}/{{batch_date:%H}}/atmos/gfs.t{{step}}z.pgrb2.0p25.f{{step:03}}`
     - ![aws](static/icon/aws.png)[aws s3]() - `s3://noaa-gfs-bdp-pds/gfs.{{batch_date:%Y%m%d}}/{{batch_date:%H}}/gfs.t{{batch_date:%H}}z.pgrb2.0p25.f{{step:03}}` (from 2021-02-26 to now)
     - ![ftp](static/icon/ftp.png)[ftp]() - `ftp://ftp.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/`
-
-- [DWD]()
-    - [ ] TODO
+- ![http](static/icon/http.png)[DWD ICON](https://opendata.dwd.de/weather/nwp/) - ICON global, ICON-EU and high-resolution regional products from Deutscher Wetterdienst covering the globe and Europe.
+    - ![http](static/icon/http.png)[Open Data hub](https://opendata.dwd.de/weather/nwp/icon/global/grib/) - `https://opendata.dwd.de/weather/nwp/icon/{{domain}}/grib/{{cycle}}/{{run_date:%Y%m%d}}/{{run_hour:%H}}/icon{{domain_suffix}}_{{forecast:03}}_{{level}}_{{parameter}}.grib2`
+    - ![ftp](static/icon/ftp.png)[FTP mirror](ftp://opendata.dwd.de/weather/nwp/) - `ftp://opendata.dwd.de/weather/nwp/icon/{{domain}}/grib/{{cycle}}/{{run_date:%Y%m%d}}/{{run_hour:%H}}/`
 
 ### :paperclip: Observation Data :satellite:
 
 #### :pushpin: Station Oberservation
-- [ ] TODO
+- ![http](static/icon/http.png)[NOAA ISD](https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database) - Global hourly and synoptic station data curated by NCEI.
+    - ![http](static/icon/http.png)[HTTPS](https://www.ncei.noaa.gov/data/global-hourly/) - `https://www.ncei.noaa.gov/data/global-hourly/access/{{year}}/{{usaf}}-{{wban}}.csv`
+    - ![ftp](static/icon/ftp.png)[FTP](https://www.ncei.noaa.gov/data/global-hourly/archive/) - `ftp://ftp.ncei.noaa.gov/pub/data/noaa/{{year}}/{{usaf}}-{{wban}}-{{year}}.gz`
 #### :pushpin: Reanalysis
 
 - ECMWF
-    - [ERA5]()
-        - [ ] TODO
+    - [ERA5](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) - Hourly global reanalysis from 1940 to near-real-time at 0.25°.
+        - ![http](static/icon/http.png)[CDS API](https://cds.climate.copernicus.eu/api-how-to) - `https://cds.climate.copernicus.eu/api/v2/resources/reanalysis-era5-single-levels`
+        - ![http](static/icon/http.png)[CDS Portal](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview)
+    - [ERA5-Land](https://www.ecmwf.int/en/forecasts/dataset/era5-land) - Land-surface focused reanalysis downscaled to 9 km resolution.
+        - ![http](static/icon/http.png)[CDS API](https://cds.climate.copernicus.eu/api-how-to) - `https://cds.climate.copernicus.eu/api/v2/resources/reanalysis-era5-land`
+- NASA
+    - [MERRA-2](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/) - Modern-Era retrospective analysis with aerosol and chemistry support.
+        - ![http](static/icon/http.png)[GES DISC](https://disc.gsfc.nasa.gov/datasets/M2I1NXASM_V5.12.4/summary) - `https://gpm1.gesdisc.eosdis.nasa.gov/data/MERRA2/{{collection}}/{{year}}/{{month}}/MERRA2_{{stream}}.{{product}}.{{date}}.nc4`
 
 
 ## :green_book: Packages & Softwares
@@ -51,16 +59,18 @@ Meteo is even more awesome, so we made this list to curate meteo related resourc
 #### :pushpin: GRIB
 - ![c](static/icon/c.png)[eccodes](https://github.com/ecmwf/eccodes) - A package developed by ECMWF which provides an application programming interface for decoding and encoding messages in GRIB 1/2 and BUFR 3/4 format.
 - ![python](static/icon/python.png)[pygrib](https://github.com/jswhit/pygrib) -  A high-level wrapped interface to the eccodes library for reading GRIB files.
+- ![python](static/icon/python.png)[cfgrib](https://github.com/ecmwf/cfgrib) - Python interface to read GRIB files as xarray datasets using ecCodes.
+- ![c](static/icon/c.png)[wgrib2](https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/) - Command line utility for manipulating and querying GRIB2 files.
 
 #### :pushpin: netCDF
 
 - ![c](static/icon/c.png)[netcdf-c](https://github.com/Unidata/netcdf-c) - The C interfaces for the Unidata network Common Data Form (netCDF), which is a self-describing, network-transparent, directly accessible, and extendible data format.
-
 - ![pythib](static/icon/python.png)[netcdf4-python](https://github.com/Unidata/netcdf4-python) - Python/numpy interface to the netCDF C library.
+- ![python](static/icon/python.png)[xarray](https://github.com/pydata/xarray) - Labeled multi-dimensional arrays built on netCDF data structures.
+- ![java](static/icon/java.png)[netCDF-Java](https://github.com/Unidata/netcdf-java) - Java library and tools for reading, writing, and remote access of netCDF, HDF, and related data formats.
 
 
 
 ## :orange_book: Algorithm
 
 ## :blue_book: Documents
-
