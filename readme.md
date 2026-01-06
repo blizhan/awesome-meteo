@@ -27,12 +27,12 @@ Meteo is even more awesome, so we made this list to curate meteo related resourc
     - ![http](static/icon/http.png)[ECMWF Data Store](https://data.ecmwf.int/forecasts/) - `https://data.ecmwf.int/forecasts/{{batch_date:%Y%m%d}}/{{batch_date:%H}}z/0p4-beta/{{product}}/{{batch_date:%Y%m%d%H}}0000-{{step}}h-{{product}}-{{datatype}}.grib2`
     - ![aws](static/icon/aws.png)[aws s3](https://registry.opendata.aws/ecmwf-forecasts/) - `s3://ecmwf-forecasts/{{batch_date:%Y%m%d}}/{{batch_date:%H}}z/0p4-beta/{{product}}/{{batch_date:%Y%m%d%H}}0000-{{step}}h-{{product}}-{{datatype}}.grib2` (from 2023-01-18 to now)
 - ![noaa](static/icon/noaa.png)[NOAA]() - The data includes deterministic forecasts(gfs), ensemble forecasts(gefs) and wave forecasts(gfswave).
-    - ![http](static/icon/http.png)[nomads](https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/) - `https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.{{batch_date:%Y%m%d}}/{{batch_date:%H}}/atmos/gfs.t{{step}}z.pgrb2.0p25.f{{step:03}}`
-    - ![aws](static/icon/aws.png)[aws s3]() - `s3://noaa-gfs-bdp-pds/gfs.{{batch_date:%Y%m%d}}/{{batch_date:%H}}/gfs.t{{batch_date:%H}}z.pgrb2.0p25.f{{step:03}}` (from 2021-02-26 to now)
+    - ![http](static/icon/http.png)[nomads](https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/) - `https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.{{batch_date:%Y%m%d}}/{{batch_date:%H}}/atmos/gfs.t{{batch_date:%H}}z.pgrb2.0p25.f{{step:03}}`
+    - ![aws](static/icon/aws.png)[aws s3](https://registry.opendata.aws/noaa-gfs-bdp-pds/) - `s3://noaa-gfs-bdp-pds/gfs.{{batch_date:%Y%m%d}}/{{batch_date:%H}}/gfs.t{{batch_date:%H}}z.pgrb2.0p25.f{{step:03}}` (from 2021-02-26 to now)
     - ![ftp](static/icon/ftp.png)[ftp]() - `ftp://ftp.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/`
 - ![http](static/icon/http.png)[DWD ICON](https://opendata.dwd.de/weather/nwp/) - ICON global, ICON-EU and high-resolution regional products from Deutscher Wetterdienst covering the globe and Europe.
     - ![http](static/icon/http.png)[Open Data hub](https://opendata.dwd.de/weather/nwp/icon/global/grib/) - `https://opendata.dwd.de/weather/nwp/icon/{{domain}}/grib/{{cycle}}/{{run_date:%Y%m%d}}/{{run_hour:%H}}/icon{{domain_suffix}}_{{forecast:03}}_{{level}}_{{parameter}}.grib2`
-    - ![ftp](static/icon/ftp.png)[FTP mirror](ftp://opendata.dwd.de/weather/nwp/) - `ftp://opendata.dwd.de/weather/nwp/icon/{{domain}}/grib/{{cycle}}/{{run_date:%Y%m%d}}/{{run_hour:%H}}/`
+    - HTTPS-only access; no official FTP mirror is provided by DWD for ICON open data.
 
 ### :paperclip: Observation Data :satellite:
 
